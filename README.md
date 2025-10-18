@@ -1,17 +1,22 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/vhoKWTLf)
 # assignment-2
 
-Generate legacy addresses, bech32 addresses and bech32m addresses
+## Generate legacy addresses, bech32 addresses and bech32m addresses
 
 Test Evidence(Screenshots)
+
 <img width="767" height="272" alt="Screenshot 2025-10-14 at 9 06 10 AM" src="https://github.com/user-attachments/assets/bd4f2495-ee76-4b5c-9228-97762358266d" />
 
+---
+---
 
-What is the difference between hardened and non hardened keys
+## What is the difference between hardened and non hardened keys
 
 The difference between hardened and non-hardened keys lies in their derivation process and security implications.
 
-* **Non-Hardened Keys**
+* **Derivation comparison**
+
+    **Non-Hardened Keys**
 
    A non-hardened child key is derived from the parent key and the chain’s code using the formulae
    
@@ -19,13 +24,7 @@ The difference between hardened and non-hardened keys lies in their derivation p
    k(i) = k_par + hash(K_par, c_par, i)
    ```
    where:
-   `k_par` = parent private key
-
-   `K_par` = parent public key
-
-   `c_par` = chain code
-
-   `i` = index
+   `k_par` = parent private key, `K_par` = parent public key, `c_par` = chain code, `i` = index
 
    This allows the derivation of child public keys from an extended public key (xPub), which is crucial for creating watch-only wallets.
 
@@ -48,7 +47,7 @@ The difference between hardened and non-hardened keys lies in their derivation p
   **Non-Hardened**: Indices from `0` to `2³¹ - 1`
   **Hardened**: Indices from `2³¹` to `2³² - 1`
 
-* Feature Comparison
+* **Feature Comparison**
 
 | Feature                                   | Non-Hardened                    | Hardened                          |
 | ----------------------------------------- | ------------------------------- | --------------------------------- |
@@ -57,7 +56,7 @@ The difference between hardened and non-hardened keys lies in their derivation p
 | Example derivation path                   | `m/0/1/2`                       | `m/0'/1'/2'`                      |
 
 
-Why should a wallet developer prefer deterministic wallets over non deterministic wallets
+## Why should a wallet developer prefer deterministic wallets over non deterministic wallets
 * Deterministic wallets generate keys from a single seed, which allows the entire wallet to be backed up with just one piece of information(mnemonic phrase), this eliminates the need to backup every private key which is major burden in non-deterministic wallets where each key is randomly generated and independent.
 
 * Deterministic wallets, particularly hierarchical deterministic wallets defined by BIP-32, offer a tree-like structure that enables better organization and privacy. This structure enables developers to create different branches for different purposes without compromising security, which is not feasible with non-deterministic wallets, which lack any inherent relationship between keys.
@@ -66,4 +65,4 @@ Why should a wallet developer prefer deterministic wallets over non deterministi
 
 * Deterministic wallets are interoperable across different wallet implementations due to standardized protocols like BIP-39(mnemonic phrases) and BIP-44(multi-account structures), which allow users to easily migrate their funds between wallets. This flexibility and standardization are absent in non-deterministic wallets, which are incompatible and harder to restore.
 
-All these advantages in ease of backup, organizational flexibility, enhanced privacy, and cross-wallet compatibility are the main contributing factors to preferring deterministic wallets over non-deterministic wallets.
+    All these advantages in ease of backup, organizational flexibility, enhanced privacy, and cross-wallet compatibility are the main contributing factors to preferring deterministic wallets over non-deterministic wallets.
