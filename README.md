@@ -10,6 +10,8 @@ Test Evidence(Screenshots)
 ---
 ---
 
+<br/>
+
 ## What is the difference between hardened and non hardened keys
 
 The difference between hardened and non-hardened keys lies in their derivation process and security implications.
@@ -55,6 +57,10 @@ The difference between hardened and non-hardened keys lies in their derivation p
 | Secure if `xPub` + child private exposed? | No (master key can be leaked)   | Yes (master key remains secure)   |
 | Example derivation path                   | `m/0/1/2`                       | `m/0'/1'/2'`                      |
 
+---
+---
+
+<br/>
 
 ## Why should a wallet developer prefer deterministic wallets over non deterministic wallets
 * Deterministic wallets generate keys from a single seed, which allows the entire wallet to be backed up with just one piece of information(mnemonic phrase), this eliminates the need to backup every private key which is major burden in non-deterministic wallets where each key is randomly generated and independent.
@@ -65,4 +71,4 @@ The difference between hardened and non-hardened keys lies in their derivation p
 
 * Deterministic wallets are interoperable across different wallet implementations due to standardized protocols like BIP-39(mnemonic phrases) and BIP-44(multi-account structures), which allow users to easily migrate their funds between wallets. This flexibility and standardization are absent in non-deterministic wallets, which are incompatible and harder to restore.
 
-    All these advantages in ease of backup, organizational flexibility, enhanced privacy, and cross-wallet compatibility are the main contributing factors to preferring deterministic wallets over non-deterministic wallets.
+    <br/> All these advantages in ease of backup, organizational flexibility, enhanced privacy, and cross-wallet compatibility are the main contributing factors to preferring deterministic wallets over non-deterministic wallets.
