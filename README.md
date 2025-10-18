@@ -46,8 +46,7 @@ The difference between hardened and non-hardened keys lies in their derivation p
 
 * **indexing comparison**
    
-  **Non-Hardened**: Indices from `0` to `2³¹ - 1`
-  **Hardened**: Indices from `2³¹` to `2³² - 1`
+  **Non-Hardened** have Indices from `0` to `2³¹ - 1` while **Hardened** have Indices from `2³¹` to `2³² - 1`
 
 * **Feature Comparison**
 
